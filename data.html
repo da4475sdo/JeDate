@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="skin/jedate.css">
+  <script src="jquery-1.11.3.min.js"></script>
+  <script src="jedate.js"></script>
+</head>
+<body class="bodys">
+
+<a href="http://www.jayui.com/jedate/">http://www.jayui.com/jedate/</a>
+
+<input value="2016-08-30 12:00" type="text" id="form" onclick="show()"
+       style="width:300px;height:20px;position: absolute;right: 0;top: 0;left:0;margin:auto;">
+<!--使用 data-date 自动赋值到 start 和 end -->
+<input type="type" data-date="start">
+<input type="type" data-date="end">
+
+<script type="text/javascript">
+  function show() {
+    jeDate({
+      isDouble: true,
+      isClear:true,
+      dateCell: "#form",
+      isTime:true,
+      format: "YYYY-MM-DD hh:mm:ss" //需要对应 minDate 要和 format 对象要有年月/或者年月日
+//      minDate: jeDate.now(),
+    })
+  }
+</script>
+
+
+</body>
+</html>
